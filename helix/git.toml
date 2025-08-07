@@ -1,0 +1,10 @@
+["~/.config/helix/config.toml".key_value_present.keys.normal]
+C-g = [
+    ":write-all",
+    ":new",
+    ":insert-output gitui >/dev/tty",
+    ":buffer-close!",
+    ":redraw",
+    ":reload-all"
+]
+"C-x" = ":reset-diff-change"

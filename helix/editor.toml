@@ -1,0 +1,38 @@
+["~/.config/helix/config.toml".key_value_present.editor]
+line-number = "relative"
+mouse = true
+true-color = true
+
+["~/.config/helix/config.toml".key_value_present.editor.file-picker]
+hidden = false
+
+["~/.config/helix/config.toml".key_value_present.editor.soft-wrap]
+enable = true
+max-wrap = 25 # increase value to reduce forced mid-word wrapping
+max-indent-retain = 0
+
+["~/.config/helix/config.toml".key_value_present.editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "hint"
+
+["~/.config/helix/config.toml".key_value_present.editor.lsp]
+display-inlay-hints = true
+
+["~/.config/helix/config.toml".key_value_present.editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+["~/.config/helix/config.toml".key_value_present.keys.normal]
+C-v = "vsplit"
+C-h = "jump_view_left"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+C-l = "jump_view_right"
+"C-," = "goto_previous_buffer"
+"C-." = "goto_next_buffer"
+
+["~/.config/helix/config.toml".key_value_present.keys.insert]
+# VSCode-like auto-completion (pretty much all IDEs do it on C-space)
+"C-space" = "completion"
+
