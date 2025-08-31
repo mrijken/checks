@@ -1,0 +1,68 @@
+[["~/.config/helix/languages.toml".lines_present]]
+__tags__ = ["helix", "rust"]
+__marker__ = "# Rust"
+__lines__ =  """
+[[language]]
+name = "rust"
+language-servers = ["rust-analyzer"]
+formatter = { command = "rustfmt" }
+auto-format = true
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+"""
+
+
+[["~/.config/helix/languages.toml".lines_present]]
+__tags__ = ["helix", "python"]
+__marker__ = "# Python"
+__lines__ =  """
+[[language]]
+name = "python"
+language-servers = ["ruff", "basedpyright"]
+auto-format = true
+
+# [language-server.basedpyright]
+# command = "basedpyright"
+
+[language-server.pylsp]
+command = "pylsp"
+
+[language-server.ty]
+command = "ty"
+args = ["server"]
+
+[language-server.pyrefly]
+#uv tool install pyrefly
+command = "pyrefly"
+args = [ "lsp" ]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+"""
+
+
+[["~/.config/helix/languages.toml".lines_present]]
+__tags__ = ["helix", "bash"]
+__marker__ = "# Bash"
+__lines__ =  """
+[[language]]
+name = "bash"
+language-servers = ["bash-language-server"]
+formatter = { command = "shfmt" , args = ["-l","-w"]}
+auto-format = true
+
+[language-server.bash-language-server]
+command = "bash-language-server"
+"""
+
+
+[["~/.config/helix/languages.toml".lines_present]]
+__tags__ = ["helix", "markdown"]
+__marker__ = "# Markdown"
+__lines__ =  """
+[[language]]
+name = "markdown"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+"""

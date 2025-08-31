@@ -23,16 +23,6 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
-["~/.config/helix/config.toml".key_value_present.keys.normal]
-C-v = "vsplit"
-C-h = "jump_view_left"
-C-j = "jump_view_down"
-C-k = "jump_view_up"
-C-l = "jump_view_right"
-"C-," = "goto_previous_buffer"
-"C-." = "goto_next_buffer"
-
-["~/.config/helix/config.toml".key_value_present.keys.insert]
-# VSCode-like auto-completion (pretty much all IDEs do it on C-space)
-"C-space" = "completion"
-
+[["~/.bashrc".lines_present]]
+__marker__ = "# Helix"
+__lines__ = "export EDITOR=hx"
