@@ -1,0 +1,18 @@
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/neotest.lua"
+lines = """
+return {
+    "nvim-neotest/neotest-python",
+    dependencies = {
+        "nvim-neotest/neotest-python"
+    },
+    opt = {
+        adapters = {
+            ["neotest-python"] = {
+                runner = "pytest"
+            }
+        }
+    }
+}
+"""
+

@@ -1,0 +1,14 @@
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/fidget.lua"
+lines = """
+return {
+    "j-hui/fidget.nvim",
+    opts = {
+        -- options
+    },
+    config = function()
+        require("fidget").setup({})
+    end
+}
+"""
+

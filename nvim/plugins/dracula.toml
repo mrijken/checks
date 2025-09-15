@@ -1,0 +1,17 @@
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/dracula.lua"
+lines = """
+return {
+      -- add dracula
+  { "Mofiqul/dracula.nvim" },
+
+  -- Configure LazyVim to load dracula
+  {
+   "LazyVim/LazyVim",
+  opts = {
+    colorscheme = "dracula",
+   },
+  },
+}
+"""
+
