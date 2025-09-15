@@ -11,7 +11,7 @@ require("config.options")
 [[key_value_present]]
 file = "~/.config/nvim/lazyvim.json"
 key.version = 8
-key.news.'NEWS.md': "10960"
+key.news.'NEWS.md' = "10960"
 key.extras = []
 
 [[entry_present]]
