@@ -1,0 +1,499 @@
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/fidget.lua"
+lines = """
+return {
+    "j-hui/fidget.nvim",
+    opts = {
+        -- options
+    },
+    config = function()
+        require("fidget").setup({})
+    end
+}
+"""
+
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/dracula.lua"
+lines = """
+return {
+      -- add dracula
+  { "Mofiqul/dracula.nvim" },
+
+  -- Configure LazyVim to load dracula
+  {
+   "LazyVim/LazyVim",
+  opts = {
+    colorscheme = "dracula",
+   },
+  },
+}
+"""
+
+
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/git.lua"
+lines = """
+return {
+    {
+        "tpope/vim-fugitive"
+    },
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup({
+                current_line_blame = true, -- Enable current line blame by default
+                current_line_blame_opts = {
+                    delay = 500,           -- Optional: Delay before showing the blame, adjust as needed
+                },
+                current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
+            })
+            vim.keymap.set('n', '<C-g>', ':Gitsigns preview_hunk<CR>',
+                { desc = "git preview", noremap = true, silent = true })
+            vim.keymap.set('n', '<leader>gt', ':Gitsigns toggle_current_line_blame<CR>',
+                { desc = "toggle blame", noremap = true, silent = true })
+        end
+    },
+    -- nvim v0.8.0
+    {
+        "kdheepak/lazygit.nvim",
+        lazy = true,
+        cmd = {
+            "LazyGit",
+            "LazyGitConfig",
+            "LazyGitCurrentFile",
+            "LazyGitFilter",
+            "LazyGitFilterCurrentFile",
+        },
+        -- optional for floating window border decoration
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+        -- setting the keybinding for LazyGit with 'keys' is recommended in
+        -- order to load the plugin when the command is run for the first time
+        keys = {
+            { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+        },
+        config = function()
+            vim.g.lazygit_floating_window_winblend = 0 -- transparency of floating window
+            vim.g.lazygit_floating_window_scaling_factor = 0.9 -- scaling factor for floating window
+            vim.g.lazygit_floating_window_border_chars = { '╭', '─', '╮', '│', '╯', '─', '╰', '│' } -- customize lazygit popup window border characters
+            vim.g.lazygit_floating_window_use_plenary = 0 -- use plenary.nvim to manage floating window if available
+            vim.g.lazygit_use_neovim_remote = 1 -- fallback to 0 if neovim-remote is not installed
+
+            vim.g.lazygit_use_custom_config_file_path = 0 -- config file path is evaluated if this value is 1
+            vim.g.lazygit_config_file_path = '' -- custom config file path
+            -- OR
+            vim.g.lazygit_config_file_path = {} -- table of custom config file paths
+        end
+    }
+}
+"""
+
+
+
+
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/illuminate.lua"
+lines = """
+return {
+    "RRethy/vim-illuminate",
+    config = function()
+        -- default configuration
+        require('illuminate').configure({
+            -- providers: provider used to get references in the buffer, ordered by priority
+            providers = {
+                'regex',
+                'lsp',
+                'treesitter',
+            },
+            -- delay: delay in milliseconds
+            delay = 100,
+            -- filetype_overrides: filetype specific overrides.
+            -- The keys are strings to represent the filetype while the values are tables that
+            -- supports the same keys passed to .configure except for filetypes_denylist and filetypes_allowlist
+            filetype_overrides = {},
+            -- filetypes_denylist: filetypes to not illuminate, this overrides filetypes_allowlist
+            filetypes_denylist = {
+                'dirbuf',
+                'dirvish',
+                'fugitive',
+                'NvimTree',
+                'TelescopePrompt',
+                'dashboard'
+            },
+            -- filetypes_allowlist: filetypes to illuminate, this is overridden by filetypes_denylist
+            -- You must set filetypes_denylist = {} to override the defaults to allow filetypes_allowlist to take effect
+            filetypes_allowlist = {},
+            -- modes_denylist: modes to not illuminate, this overrides modes_allowlist
+            -- See `:help mode()` for possible values
+            modes_denylist = {},
+            -- modes_allowlist: modes to illuminate, this is overridden by modes_denylist
+            -- See `:help mode()` for possible values
+            modes_allowlist = {},
+            -- providers_regex_syntax_denylist: syntax to not illuminate, this overrides providers_regex_syntax_allowlist
+            -- Only applies to the 'regex' provider
+            -- Use :echom synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')
+            providers_regex_syntax_denylist = {},
+            -- providers_regex_syntax_allowlist: syntax to illuminate, this is overridden by providers_regex_syntax_denylist
+            -- Only applies to the 'regex' provider
+            -- Use :echom synIDattr(synIDtrans(synID(line('.'), col('.'), 1)), 'name')
+            providers_regex_syntax_allowlist = {},
+            -- under_cursor: whether or not to illuminate under the cursor
+            under_cursor = true,
+            -- large_file_cutoff: number of lines at which to use large_file_config
+            -- The `under_cursor` option is disabled when this cutoff is hit
+            large_file_cutoff = 10000,
+            -- large_file_config: config to use for large files (based on large_file_cutoff).
+            -- Supports the same keys passed to .configure
+            -- If nil, vim-illuminate will be disabled for large files.
+            large_file_overrides = nil,
+            -- min_count_to_highlight: minimum number of matches required to perform highlighting
+            min_count_to_highlight = 1,
+            -- should_enable: a callback that overrides all other settings to
+            -- enable/disable illumination. This will be called a lot so don't do
+            -- anything expensive in it.
+            should_enable = function(bufnr) return true end,
+            -- case_insensitive_regex: sets regex case sensitivity
+            case_insensitive_regex = false,
+            -- disable_keymaps: disable default keymaps
+            disable_keymaps = false,
+        })
+    end
+}
+"""
+
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/indent0-blankline.lua"
+lines = """
+return {
+    "lukas-reineke/indent-blankline.nvim",
+    tag = 'v3.8.2',
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+    config = function()
+        require("ibl").setup({
+            exclude = {
+                filetypes = {
+                    'lspinfo',
+                    'lazy',
+                    'checkhealth',
+                    'help',
+                    'man',
+                    'dashboard',
+                }
+            }
+        })
+    end
+}
+"""
+
+
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/inlay.lua"
+lines = """
+return {
+    "MysticalDevil/inlay-hints.nvim",
+    event = "LspAttach",
+    dependencies = { "neovim/nvim-lspconfig" },
+    config = function()
+       require("inlay-hints").setup()
+    end,
+}
+"""
+
+
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/lsp.lua"
+lines = """
+return { "mason-org/mason-lspconfig.nvim",
+  dependencies = {
+        {"mason-org/mason.nvim",opts = {} },
+    "neovim/nvim-lspconfig"
+  },
+    opt = {
+ensure_installed = { "rust-analyzer", "pyrefly", "shfmt", "typescript-language-server", "basedpyright", "ruff",
+        "tombi", "markdown-oxide", "prettier", "gitlab-ci-ls", "lua_ls" }
+    }
+
+}
+"""
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/lsp_signature.lua"
+lines = """
+return {
+    "ray-x/lsp_signature.nvim",
+    config = function()
+        require("lsp_signature").setup({
+            bind = true,           -- This is mandatory
+            handler_opts = {
+                border = "rounded" -- Options: 'single', 'double', 'shadow', 'none'
+            }
+        })
+    end,
+}
+"""
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/lualine.lua"
+lines = """
+return {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+        require('lualine').setup {
+            options = {
+                icons_enabled = true,
+                theme = 'palenight',
+                component_separators = '|',
+                section_separators = '',
+            },
+            sections = {
+                lualine_a = { 'mode' },
+                lualine_b = { 'branch' },
+                lualine_c = { 'filename' },
+                lualine_x = { 'encoding', 'fileformat', 'filetype',
+                    {
+                        "diagnostics",
+                        symbols = {
+                            error = icons.diagnostics.Error,
+                            warn = icons.diagnostics.Warn,
+                            info = icons.diagnostics.Info,
+                            hint = icons.diagnostics.Hint,
+                        },
+                        colored = true,
+                        always_visible = true,
+                    },
+                },
+                lualine_y = {
+                    'progress',
+                    function()
+                        return ' ' .. os.date('%H:%M') -- Adds a clock icon () next to the current time
+                    end,
+                },
+                lualine_z = { 'location' },
+            },
+            inactive_sections = {
+                lualine_a = {},
+                lualine_b = {},
+                lualine_c = { 'filename' },
+                lualine_x = { 'location' },
+                lualine_y = {},
+                lualine_z = {},
+            },
+            tabline = {},
+            extensions = {},
+        }
+    end
+}
+"""
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/mini-icons.lua"
+lines = """
+return {
+  "echasnovski/mini.icons",
+  lazy = true,
+  opts = {
+    file = {
+      [".keep"] = { glyph = "󰊢", hl = "MiniIconsGrey" },
+      ["devcontainer.json"] = { glyph = "", hl = "MiniIconsAzure" },
+    },
+    filetype = {
+      dotenv = { glyph = "", hl = "MiniIconsYellow" },
+    },
+  },
+  init = function()
+    package.preload["nvim-web-devicons"] = function()
+      require("mini.icons").mock_nvim_web_devicons()
+      return package.loaded["nvim-web-devicons"]
+    end
+  end,
+}
+"""
+
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/neotest.lua"
+lines = """
+return {
+    "nvim-neotest/neotest-python",
+    dependencies = {
+        "nvim-neotest/neotest-python"
+    },
+    opt = {
+        adapters = {
+            ["neotest-python"] = {
+                runner = "pytest"
+            }
+        }
+    }
+}
+"""
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/neotree.lua"
+lines = """
+return {
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- Optional, for file icons
+            "MunifTanjim/nui.nvim",
+        },
+        config = function()
+            -- Set keymap for toggling Neo-tree with <leader>e
+            vim.keymap.set('n', '<leader>e', ':Neotree toggle<CR>', { silent = true, noremap = true })
+            -- Set keymap for toggling Git status with <leader>ge
+            vim.keymap.set('n', '<leader>ge', ':Neotree toggle git_status<CR>', { silent = true, noremap = true })
+
+            -- Function to toggle hidden & git-ignored files
+            local function toggle_hidden()
+                local state = require("neo-tree.sources.manager").get_state("filesystem")
+                if state then
+                    local filters = state.filtered_items
+                    filters.visible = not filters.visible
+                    filters.hide_dotfiles = not filters.hide_dotfiles
+                    filters.hide_gitignored = not filters.hide_gitignored
+                    require("neo-tree.sources.filesystem")._navigate_internal(state, nil, nil)
+                end
+            end
+
+            -- Keymap to toggle hidden and git-ignored files
+            vim.keymap.set('n', '<leader>th', toggle_hidden,
+                { noremap = true, silent = true, desc = "Toggle Hidden Files" })
+
+            -- Optionally configure Neo-tree here
+            require("neo-tree").setup({
+                -- Use custom icons for different components
+                default_component_configs = {
+                    window = {
+                        position = "left", -- Position NeoTree on the left
+                        width = 35, -- Adjust width based on your preference
+                    },
+                    icon = {
+                        folder_closed = icons.kinds.Folder,
+                        folder_open = " ",
+                        folder_empty = " ",
+                        default = icons.kinds.File,
+                    },
+                    git_status = {
+                        symbols = {
+                            added     = icons.git.added,
+                            modified  = icons.git.modified,
+                            deleted   = icons.git.removed,
+                            renamed   = "", -- icon for renamed files
+                            untracked = "",
+                            ignored   = "",
+                            unstaged  = "",
+                            staged    = "",
+                            conflict  = "",
+                        },
+                    },
+                },
+                filesystem = {
+                    follow_current_file = {
+                        enabled = true,
+                    },   -- Automatically focus the file in the explorer
+                    hijack_netrw_behavior = "open_current", -- Replace netrw
+                    filtered_items = {
+                        visible = true,  -- Show hidden files
+                        hide_dotfiles = false,  -- Show dotfiles (e.g., `.gitignore`, `.env`)
+                        hide_gitignored = false, -- Show files ignored by Git
+                        hide_by_name = { "node_modules" }, -- You can customize which folders to hide
+                    },
+                },
+            })
+        end
+    }
+}
+"""
+
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/telescope.lua"
+lines = """
+return {
+    {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.8',
+        dependencies = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('telescope').setup({
+                defaults = {
+                    vimgrep_arguments = {
+                        'rg',
+                        '--color=never',
+                        '--no-heading',
+                        '--with-filename',
+                        '--line-number',
+                        '--column',
+                        '--smart-case',
+                        '--no-ignore', -- Include files ignored by .gitignore
+                        '--hidden', -- Include hidden files
+                        '--glob', '!target/', -- Exclude the `target/` directory
+                        '--binary', -- Ignore all binary files
+                    },
+                },
+                pickers = {
+                    find_files = {
+                        find_command = { 'rg', '--files', '--hidden', '--no-ignore', '--glob', '!target/', '--binary' },
+                    },
+                },
+                extensions = {
+                    themes = require('telescope.themes').get_dropdown({}),
+                },
+            })
+
+            -- Keymap to bring up the colorscheme picker
+            vim.keymap.set('n', '<leader>uC', function()
+                require('telescope.builtin').colorscheme({
+                    enable_preview = true, -- Shows preview of the colorschemes
+                })
+            end, { noremap = true, silent = true })
+        end,
+    },
+    {
+        'nvim-telescope/telescope-ui-select.nvim',
+        config = function()
+            require("telescope").setup({
+                extensions = {
+                    ["ui-select"] = {
+                        require("telescope.themes").get_dropdown {
+                        }
+                    }
+                }
+            })
+            require("telescope").load_extension("ui-select")
+        end
+    }
+}
+"""
+
+
+[[lines_present]]
+file = "~/.config/nvim/lua/plugins/treesitter.lua"
+lines = """
+return {
+  'nvim-treesitter/nvim-treesitter',
+  build = ':TSUpdate', -- Automatically update parsers on update
+  config = function()
+    require('nvim-treesitter.configs').setup {
+      ensure_installed = { "lua", "javascript", "python", "bash", "markdown", "rust" }, -- Add other languages as needed
+      highlight = { enable = true }, -- Enable syntax highlighting using Tree-sitter
+      indent = { enable = true }, -- Enable indentation based on Tree-sitter
+      -- You can add other Tree-sitter modules here as needed
+    }
+  end
+}
+"""
