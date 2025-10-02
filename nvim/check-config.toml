@@ -30,6 +30,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 """
+
 [[lines_present]]
 file = "~/.config/nvim/lua/config/autocmds.lua"
 marker = "clear snippet session"
@@ -44,8 +45,6 @@ vim.api.nvim_create_autocmd({ "ModeChanged", "CursorMovedI" }, {
     end,
 })
 """
-
-
 
 [[lines_present]]
 file = "~/.config/nvim/lua/config/icons.lua"
@@ -118,7 +117,6 @@ icons = {
     },
 }
 """
-
 
 [[lines_present]]
 file = "~/.config/nvim/lua/config/keymaps.lua"
@@ -368,7 +366,6 @@ vim.keymap.set('n', '<Down>', '<Down>zz', {noremap = false, silent = true, desc 
 vim.keymap.set('n', '<Up>', '<Up>zz', {noremap = false, silent = true, desc = "center cursor"})
 """
 
-
 [[lines_present]]
 file = "~/.config/nvim/lua/config/lazy.lua"
 lines = """
@@ -470,3 +467,8 @@ vim.opt.cursorline = true -- Highlight the current line
 -- Enable automatic spell checking
 vim.opt.spell = true
 """
+
+[[lines_present]]
+file = "~/.bashrc"
+marker = "# Default editor"
+lines = "export EDITOR=nvim"
