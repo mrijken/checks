@@ -49,12 +49,12 @@ z() {
 
 [[lines_present]]
 file = "~/.config/zellij/config.kdl"
-marker = "# lock at startup"
+marker = "// lock at startup"
 lines = """default_mode "locked" """
 
 [[lines_present]]
 file = "~/.config/zellij/config.kdl"
-marker = "# theme"
+marker = "// theme"
 lines = """theme "dracula" """
 
 [[file_copied]]
