@@ -60,3 +60,7 @@ lines = """theme "dracula" """
 [[file_copied]]
 source = "config:dracula.kdl"
 destination = "~/.config/zellij/themes/dracula.kdl"
+
+[[file_copied]]
+source = "config:catppuccin.kdl"
+destination = "~/.config/zellij/themes/catppuccin.kdl"

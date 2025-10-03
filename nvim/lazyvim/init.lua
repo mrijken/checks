@@ -1,0 +1,5 @@
+require("nvim.lazyvim.config.icons")
+require("nvim.lazyvim.config.lazy")
+require("nvim.lazyvim.config.keymaps")
+require("nvim.lazyvim.config.autocmds")
+require("nvim.lazyvim.config.options")

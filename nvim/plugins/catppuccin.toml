@@ -1,3 +1,3 @@
 [[file_copied]]
-source = "config:dracula.lua"
+source = "config:catppuccin.lua"
 destination = "~/.config/nvim/lua/plugins/colorscheme.lua"
