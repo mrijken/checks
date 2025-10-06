@@ -8,24 +8,31 @@ require("config.autocmds")
 require("config.options")
 """
 
+[[lines_present]]
+file = "~/.config/nvim/lua/config/autocmds.lua"
+marker = "-- Show Neotree at start up"
+lines = """
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+	pattern = "*",
+	command = ":Neotree show reveal",
+})
+"""
+
+[[file_copied]]
+source = "config:config/lazy.lua"
+destination = "~/.config/nvim/lua/config/lazy.lua"
+
+[[file_copied]]
+source = "config:config/keymaps.lua"
+destination = "~/.config/nvim/lua/config/keymaps.lua"
+
 [[file_present]]
 file = "~/.config/nvim/lazyvim.json"
 placeholder = """
 {
   "extras": [
-  ],
-  "install_version": 8,
-  "news": {
-    "NEWS.md": "11866"
-  },
-  "version": 8
+  ]
 }"""
-
-[[key_value_present]]
-file = "~/.config/nvim/lazyvim.json"
-key.version = 8
-key.news.'NEWS.md' = "10960"
-key.extras = []
 
 [[entry_present]]
 file = "~/.config/nvim/lazyvim.json"
@@ -33,35 +40,29 @@ entry.extras = [
     "lazyvim.plugins.extras.coding.mini-surround",
     "lazyvim.plugins.extras.coding.yanky",
     "lazyvim.plugins.extras.editor.illuminate",
+    "lazyvim.plugins.extras.editor.neo-tree",
     "lazyvim.plugins.extras.editor.refactoring",
     "lazyvim.plugins.extras.editor.telescope",
     "lazyvim.plugins.extras.test.core",
+    "lazyvim.plugins.extras.ui.dashboard-nvim",
     "lazyvim.plugins.extras.ui.indent-blankline",
     "lazyvim.plugins.extras.ui.treesitter-context",
 ]
 
 # TODO: move to separate configs
 [[entry_present]]
-file = "~/.config/nvim/lazyvim.json"
 entry.extras = [
+    "lazyvim.plugins.extras.ai.codeium",
     "lazyvim.plugins.extras.lang.angular",
     "lazyvim.plugins.extras.lang.docker",
     "lazyvim.plugins.extras.lang.helm",
     "lazyvim.plugins.extras.lang.json",
     "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.python",
     "lazyvim.plugins.extras.lang.sql",
     "lazyvim.plugins.extras.lang.terraform",
     "lazyvim.plugins.extras.lang.toml",
     "lazyvim.plugins.extras.lang.yaml",
     "lazyvim.plugins.extras.linting.eslint",
 ]
-
-[[lines_present]]
-file = "~/.config/nvim/lua/config/autocmds.lua"
-marker = "# Show Neotree at start up"
-lines = """
-vim.api.nvim_create_autocmd({ "VimEnter" }, {
-	pattern = "*",
-	command = ":Neotree show reveal",
-})
-"""
+file = "~/.config/nvim/lazyvim.json"

@@ -55,12 +55,12 @@ lines = """default_mode "locked" """
 [[lines_present]]
 file = "~/.config/zellij/config.kdl"
 marker = "// theme"
-lines = """theme "dracula" """
+lines = """theme "catppuccin-mocha" """
 
 [[file_copied]]
-source = "config:dracula.kdl"
+source = "config:themes/dracula.kdl"
 destination = "~/.config/zellij/themes/dracula.kdl"
 
 [[file_copied]]
-source = "config:catppuccin.kdl"
+source = "config:themes/catppuccin.kdl"
 destination = "~/.config/zellij/themes/catppuccin.kdl"
