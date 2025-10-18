@@ -1,0 +1,32 @@
+[[lines_present]]
+file = "~/.bashrc"
+marker = "# bashrc directory"
+lines = """
+for file in ~/.bashrc.d/*.sh;
+do
+  source $file
+done
+"""
+
+[[dir_present]]
+dir = "~/.bashrc.d"
+
+[[file_copied]]
+source = "config:00-functions.sh"
+destination = "~/.bashrc.d/00-functions.sh"
+
+[[file_copied]]
+source = "config:10-aliasses.sh"
+destination = "~/.bashrc.d/10-aliasses.sh"
+
+[[file_copied]]
+source = "config:10-path.sh"
+destination = "~/.bashrc.d/10-path.sh"
+
+[[file_copied]]
+source = "config:90-cd-pre-hook.sh"
+destination = "~/.bashrc.d/90-cd-pre-hook.sh"
+
+[[file_copied]]
+source = "config:90-cd-pre-hook-dotenv.sh"
+destination = "~/.bashrc.d/90-cd-pre-hook-dotenv.sh"

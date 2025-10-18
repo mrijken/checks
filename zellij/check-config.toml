@@ -1,51 +1,14 @@
-[[lines_present]]
-file = "~/.bashrc"
-marker = "# zellij open session"
-lines = """
+[[file_copied]]
+source = "config:20-zellij.sh"
+destination = "~ ~/.bashrc.d/20-zellij.sh"
 
-# LAYOUT_NAME is one of
-# - the name (without extension) of the layout in ~/.config/layouts
-# - the path (so including extension) of the layout with a kdl extension
-# - http url with a kdl extension
-# When not given its set to a default name
-# - `ide_rust` when a Cargo.toml is found
-# - `ide_python` when apyproject.toml is found
-# - `ide` othwerwise
+[[file_copied]]
+source = "config:themes/dracula.kdl"
+destination = "~/.config/zellij/themes/dracula.kdl"
 
-
-z() {
-	if [ -f ".zellij/env" ]; then
-	  # get the SESSION_NAME and LAYOUT_NAME from the settings
-	  source .zellij/env
-	  if ! [ "$LAYOUT_NAME" ]; then
-	    echo "LAYOUT_NAME is not set in .zellij/env"
-	  fi
-	  if ! [ "$SESSION_NAME" ]; then
-	    echo "SESSION_NAME is not set in .zellij/env"
-	  fi
-	else
-	  # no config file found, so dynamically create
-	  # a session name and layout name
-	  SESSION_NAME=${PWD##*/}
-	  LAYOUT_NAME="ide"
-	  if [ -f "pyproject.toml" ]; then
-	    LAYOUT_NAME="ide_python"
-	  fi
-	  if [ -f "Cargo.toml" ]; then
-	    LAYOUT_NAME="ide_rust"
-	  fi
-	fi
-  
-	echo "Open zellij with session $SESSION_NAME and layout $LAYOUT_NAME"
-
-	if zellij list-sessions -s | grep ^${SESSION_NAME}$; then
-	  zellij a ${SESSION_NAME}
-	else
-	  # session can not be opened, so create a new one
-	  zellij -s ${SESSION_NAME} -n ${LAYOUT_NAME}
-	fi
-}
-"""
+[[file_copied]]
+source = "config:themes/catppuccin.kdl"
+destination = "~/.config/zellij/themes/catppuccin.kdl"
 
 [[lines_present]]
 file = "~/.config/zellij/config.kdl"
@@ -56,11 +19,3 @@ lines = """default_mode "locked" """
 file = "~/.config/zellij/config.kdl"
 marker = "// theme"
 lines = """theme "catppuccin-mocha" """
-
-[[file_copied]]
-source = "config:themes/dracula.kdl"
-destination = "~/.config/zellij/themes/dracula.kdl"
-
-[[file_copied]]
-source = "config:themes/catppuccin.kdl"
-destination = "~/.config/zellij/themes/catppuccin.kdl"
