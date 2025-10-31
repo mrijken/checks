@@ -1,0 +1,3 @@
+[[package_present]]
+type = "rust"
+package = "eza"

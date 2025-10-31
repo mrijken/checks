@@ -1,0 +1,11 @@
+[[file_copied]]
+source = "config:30-nvm.sh"
+destination_dir = "~/.bashrc.d"
+
+[[package_present]]
+type = "custom"
+package = "nvm"
+install_command = "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash"
+uninstall_command = "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/uninstall.sh | bash"
+version_command = ". ~/.nvmx/nvm.sh && nvm --version"
+version = "0.40.3"

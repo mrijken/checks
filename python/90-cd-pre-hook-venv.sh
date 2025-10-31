@@ -1,4 +1,4 @@
-Activate Python venv when changing into directory containing .venv/bin/activate
+# Activate Python venv when changing into directory containing .venv/bin/activate
 # deactivate Python venv when leaving directory containing .venv/bin/activate.
 #
 # Handle edge case, where present and new directory contain .venv/bin/activate,

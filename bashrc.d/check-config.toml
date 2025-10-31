@@ -2,10 +2,13 @@
 file = "~/.bashrc"
 marker = "# bashrc directory"
 lines = """
-for file in ~/.bashrc.d/*.sh;
-do
-  source $file
-done
+if [ -d "$HOME/.bashrc.d" ]; then
+    for script in "$HOME/.bashrc.d/"*; do
+        if [ -f "$script" ] && [ -r "$script" ]; then
+            source "$script"
+        fi
+    done
+fi
 """
 
 [[dir_present]]
@@ -13,20 +16,20 @@ dir = "~/.bashrc.d"
 
 [[file_copied]]
 source = "config:00-functions.sh"
-destination = "~/.bashrc.d/00-functions.sh"
+destination_dir = "~/.bashrc.d"
 
 [[file_copied]]
 source = "config:10-aliasses.sh"
-destination = "~/.bashrc.d/10-aliasses.sh"
+destination_dir = "~/.bashrc.d"
 
 [[file_copied]]
 source = "config:10-path.sh"
-destination = "~/.bashrc.d/10-path.sh"
+destination_dir = "~/.bashrc.d"
 
 [[file_copied]]
-source = "config:90-cd-pre-hook.sh"
-destination = "~/.bashrc.d/90-cd-pre-hook.sh"
+source = "config:20-cd-pre-hook.sh"
+destination_dir = "~/.bashrc.d"
 
 [[file_copied]]
 source = "config:90-cd-pre-hook-dotenv.sh"
-destination = "~/.bashrc.d/90-cd-pre-hook-dotenv.sh"
+destination_dir = "~/.bashrc.d"
