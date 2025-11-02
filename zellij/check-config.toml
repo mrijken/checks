@@ -24,3 +24,8 @@ destination = "~/.config/zellij/themes/catppuccin.kdl"
 [[file_copied]]
 destination = "~/.config/zellij/config.kdl"
 source = "config:config.kdl"
+
+[[package_present]]
+type = "rust"
+package = "zellij"
+version = "0.43.1"

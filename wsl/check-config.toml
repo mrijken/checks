@@ -1,6 +1,6 @@
 [[lines_present]]
-file = "~/.bashrc"
-marker = "browser"
+file = "~/.bashrc.d/10-windows.sh"
+marker = "# browser"
 lines = """
 export BROWSER=/mnt/c/'Program Files (x86)'/Microsoft/Edge/Application/msedge.exe
 alias open='cmd.exe /C start'

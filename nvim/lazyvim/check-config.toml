@@ -35,35 +35,45 @@ placeholder = """
 }"""
 
 [[entry_present]]
-file = "~/.config/nvim/lazyvim.json"
 entry.extras = [
-  "lazyvim.plugins.extras.coding.mini-surround",
-  "lazyvim.plugins.extras.coding.yanky",
-  "lazyvim.plugins.extras.editor.illuminate",
-  "lazyvim.plugins.extras.editor.neo-tree",
-  "lazyvim.plugins.extras.editor.refactoring",
-  "lazyvim.plugins.extras.editor.telescope",
-  "lazyvim.plugins.extras.test.core",
-  "lazyvim.plugins.extras.ui.dashboard-nvim",
-  "lazyvim.plugins.extras.ui.indent-blankline",
-  "lazyvim.plugins.extras.ui.treesitter-context",
+    "lazyvim.plugins.extras.coding.mini-surround",
+    "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.editor.illuminate",
+    "lazyvim.plugins.extras.editor.neo-tree",
+    "lazyvim.plugins.extras.editor.refactoring",
+    "lazyvim.plugins.extras.editor.telescope",
+    "lazyvim.plugins.extras.test.core",
+    "lazyvim.plugins.extras.ui.dashboard-nvim",
+    "lazyvim.plugins.extras.ui.indent-blankline",
+    "lazyvim.plugins.extras.ui.treesitter-context",
+    "lazyvim.plugins.extras.ui.alpha",
+    "lazyvim.plugins.extras.ui.mini-starter",        # wghat is the gaol of this?
+    "lazyvim.plugins.extras.util.mini-hipatterns",   # what if the goal of this?
+    "lazyvim.plugins.extras.editor.inc-rename",
+    "lazyvim.plugins.extras.editor.snacks_explorer",
+    "lazyvim.plugins.extras.editor.snacks_picker",
+    "lazyvim.plugins.extras.formatting.prettier",
+    "lazyvim.plugins.extras.test.core",
 ]
+file = "~/.config/nvim/lazyvim.json"
+
 
 # TODO: move to separate configs
 [[entry_present]]
 entry.extras = [
-  "lazyvim.plugins.extras.ai.codeium",
-  "lazyvim.plugins.extras.lang.angular",
-  "lazyvim.plugins.extras.lang.docker",
-  "lazyvim.plugins.extras.lang.helm",
-  "lazyvim.plugins.extras.lang.json",
-  "lazyvim.plugins.extras.lang.markdown",
-  "lazyvim.plugins.extras.lang.python",
-  "lazyvim.plugins.extras.lang.rust",
-  "lazyvim.plugins.extras.lang.sql",
-  "lazyvim.plugins.extras.lang.terraform",
-  "lazyvim.plugins.extras.lang.toml",
-  "lazyvim.plugins.extras.lang.yaml",
-  "lazyvim.plugins.extras.linting.eslint",
+    "lazyvim.plugins.extras.ai.codeium",
+    "lazyvim.plugins.extras.lang.angular",
+    "lazyvim.plugins.extras.lang.docker",
+    "lazyvim.plugins.extras.lang.helm",
+    "lazyvim.plugins.extras.lang.json",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.python",
+    "lazyvim.plugins.extras.lang.rust",
+    "lazyvim.plugins.extras.lang.sql",
+    "lazyvim.plugins.extras.lang.terraform",
+    "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.linting.eslint",
 ]
 file = "~/.config/nvim/lazyvim.json"
+indent = 2
