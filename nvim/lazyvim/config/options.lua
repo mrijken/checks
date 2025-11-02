@@ -123,3 +123,8 @@ end
 -- TODO: move to lsp options
 vim.keymap.set("n", "K", '<cmd>lua vim.lsp.buf.hover({border = "single"})<cr>')
 vim.keymap.set("i", "<C-s>", '<cmd>lua vim.lsp.buf.signature_help({border = "single"})<cr>')
+
+-- do not use swapfile
+vim.opt.swapfile = false
+
+-- TODO: show inlay hints

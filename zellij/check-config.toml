@@ -1,6 +1,6 @@
 [[file_copied]]
 source = "config:20-zellij.sh"
-destination = "~ ~/.bashrc.d/20-zellij.sh"
+destination_dir = "~/.bashrc.d"
 
 [[file_copied]]
 source = "config:themes/dracula.kdl"
