@@ -3,7 +3,7 @@ include = [
   "config:autotag/check-config.toml",
   "config:plugins/autosave.toml",
   "config:plugins/catppuccin.toml",
-  "config:python/python.toml",
-  "config:git/git.toml",
+  "config:python",
+  # "config:plugins/git.toml",
   "config:plugins/fidget.toml",
 ]
