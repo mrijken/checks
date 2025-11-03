@@ -52,7 +52,7 @@ file = "~/.config/nvim/lua/config/keymaps.lua"
 file = "~/.config/nvim/lua/config/keymaps.lua"
 marker = "-- Open parent directory with oil"
 lines = """
-vim.keymap.set("n", "-", "<CMD<Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<CMDOil<CR>", { desc = "Open parent directory" })
 """
 
 [[file_present]]
