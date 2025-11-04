@@ -12,6 +12,11 @@ include = [
     "config:plugins/fidget.toml",
 ]
 
+[[file_copied]]
+source = "https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.appimage"
+destination = "~/.local/bin/nvim"
+permissions = "755" 
+
 [[package_present]]
 type = "rust"
 package = "fd-find"

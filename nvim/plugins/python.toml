@@ -1,5 +1,5 @@
 [[file_copied]]
-source = "config:plugin.lua"
+source = "config:python.lua"
 destination = "~/.local/nvim/lua/plugins/python.lua"
 
 [[entry_present]]
