@@ -127,4 +127,3 @@ vim.keymap.set("i", "<C-s>", '<cmd>lua vim.lsp.buf.signature_help({border = "sin
 -- do not use swapfile
 vim.opt.swapfile = false
 
--- TODO: show inlay hints

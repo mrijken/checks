@@ -12,6 +12,6 @@ while true; do
     echo
     echo "Press any key to rerun, or Ctrl+C to quit..."
     # Wait for a single key press
-    read -n 1 -s -r
+    read -n 1 -s
     echo
 done

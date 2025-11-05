@@ -45,6 +45,11 @@ vim.api.nvim_create_autocmd("VimEnter", {
 source = "config:config/lazy.lua"
 destination = "~/.config/nvim/lua/config/lazy.lua"
 
+# TODO: replace with individual configs
+[[file_copied]]
+source = "config:config/options.lua"
+destination = "~/.config/nvim/lua/config/options.lua"
+
 [[file_present]]
 file = "~/.config/nvim/lua/config/keymaps.lua"
 

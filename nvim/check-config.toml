@@ -5,6 +5,7 @@ include = [
     "config:plugins/autotag.toml",
     "config:plugins/lsp.toml",
     "config:plugins/mini-icons.toml",
+    "config:plugins/multi-cursor.toml",
     "config:plugins/sql.toml",
     "config:plugins/whichkey.toml",
     "config:plugins/python.toml",
