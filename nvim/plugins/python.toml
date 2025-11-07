@@ -1,6 +1,6 @@
 [[file_copied]]
 source = "config:python.lua"
-destination = "~/.local/nvim/lua/plugins/python.lua"
+destination = "~/.config/nvim/lua/plugins/python.lua"
 
 [[entry_present]]
 file = "~/.config/nvim/lazyvim.json"

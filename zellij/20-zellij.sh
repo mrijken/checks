@@ -13,7 +13,7 @@
 # In the last situation, it checks for an .zellij/env file, if it is found it uses the SESSION_NAME and LAYOUT_NAME from there
 # otherwise it will check for Cargo.toml or pyproject.toml and use the default names for the LAYOUT_NAME and the name
 # of the cwd as SESSION_NAME
-z() {
+function z() {
     LAYOUT_NAME=""
     if [ "$1" ]; then
         SESSION_NAME=$1

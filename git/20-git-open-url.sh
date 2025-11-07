@@ -1,4 +1,4 @@
-gg() {
+function gg() {
     # Get the remote.origin.url from git config
     local git_url=$(git config --get remote.origin.url)
 

@@ -7,7 +7,7 @@
 # This works for Bash only, place at the end of ~/.bashrc.
 #
 # Based on https://unix.stackexchange.com/a/170282
-cd_pre_hook_venv() {
+function cd_pre_hook_venv() {
     venv_dir="$(realpath ${1})/.venv"
     venv_bin="${venv_dir}/bin/activate"
     if test -f "${venv_bin}"; then

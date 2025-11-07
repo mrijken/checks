@@ -19,6 +19,10 @@ source = "config:00-functions.sh"
 destination_dir = "~/.bashrc.d"
 
 [[file_copied]]
+source = "config:01-ps1-prompt.sh"
+destination_dir = "~/.bashrc.d"
+
+[[file_copied]]
 source = "config:10-aliasses.sh"
 destination_dir = "~/.bashrc.d"
 

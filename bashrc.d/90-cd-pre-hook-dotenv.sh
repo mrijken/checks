@@ -1,4 +1,4 @@
-cd_pre_hook_dotenv() {
+function cd_pre_hook_dotenv() {
     # Load .env file
     env_file="$(realpath ${1})/.env"
     if [ -f "$env_file" ]; then

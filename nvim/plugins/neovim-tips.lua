@@ -18,7 +18,7 @@ return {
 			warn_on_conflicts = true,
 			-- OPTIONAL: Daily tip mode (default: 1)
 			-- 0 = off, 1 = once per day, 2 = every startup
-			daily_tip = 1,
+			daily_tip = 0,
 			-- OPTIONAL: Bookmark symbol (default: "🌟 ")
 			bookmark_symbol = "🌟 ",
 		},

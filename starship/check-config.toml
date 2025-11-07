@@ -1,0 +1,3 @@
+[[file_copied]]
+source = "config:01-starship.sh"
+destination_dir = "~/.bashrc.d"
