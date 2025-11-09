@@ -22,6 +22,11 @@ destination_dir = "~/.bashrc.d"
 source = "config:01-ps1-prompt.sh"
 destination_dir = "~/.bashrc.d"
 
+[[package_present]]
+# needed for 01-ps1-prompt
+type = "cargo"
+package = "ansi-escape-sequences-cli"
+
 [[file_copied]]
 source = "config:10-aliasses.sh"
 destination_dir = "~/.bashrc.d"

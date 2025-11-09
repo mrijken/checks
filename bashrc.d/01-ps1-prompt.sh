@@ -10,6 +10,8 @@ function ps1_powerline {
     NUM_JOBS=$(jobs -rp | wc -l)
     GIT_BRANCH=$(__git_ps1)
 
+    # TODO: use tput in stead of ansi
+
     function w() {
         local text="$1"
         local fg="$2"
@@ -17,9 +19,9 @@ function ps1_powerline {
         local arrow="$4"
 
         if [ "$arrow" ]; then
-            echo "$(ansi bg-$bg)$(ansi ${fg})$text$(ansi $bg)"
+            echo "\[$(ansi bg-$bg)\]\[$(ansi ${fg})\]$text\[$(ansi $bg)"
         else
-            echo "$(ansi bg-$bg)$(ansi ${fg})$text$(ansi $bg)"
+            echo "\[$(ansi bg-$bg)\]\[$(ansi ${fg})\]$text\[$(ansi $bg)\]"
         fi
     }
 
@@ -98,10 +100,10 @@ function ps1_powerline {
         SHOW_ARROW="true"
     done
 
-    PS1_PROMPT="$PS1_PROMPT$(ansi bg-black)$(ansi white)\$ "
+    PS1_PROMPT="$PS1_PROMPT\[$(ansi bg-black)\]\[$(ansi white)\]\$ "
     PS1="$PS1_PROMPT"
 }
 
 if [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="ps1_powerline; $PROMPT_COMMAND"
+    PROMPT_COMMAND="ps1_powerline"
 fi
