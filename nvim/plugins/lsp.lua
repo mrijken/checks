@@ -14,6 +14,11 @@ return {
 				enabled = false,
 			},
 			inlay_hints = { enabled = true },
+			servers = {
+				bashls = {
+					filetypes = { "sh", "zsh" },
+				},
+			},
 		},
 	},
 }
