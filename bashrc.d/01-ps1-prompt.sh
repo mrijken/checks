@@ -39,7 +39,7 @@ function ps1_powerline {
         local NUM_MODIFIED=$(git diff --name-only --diff-filter=M | wc -l)
         local NUM_STAGED=$(git diff --staged --name-only --diff-filter=AM | wc -l)
         local NUM_CONFLICT=$(git diff --name-only --diff-filter=U | wc -l)
-        local GIT_STATUS="\[\e[48;5;255m\]\[\e[38;5;208m\]\[\e[38;5;27m\] ✚$NUM_MODIFIED \[\e[38;5;208m\]\[\e[38;5;2m\] ✔$NUM_STAGED \[\e[38;5;208m\]\[\e[38;5;9m\] ✘$NUM_CONFLICT "
+        local GIT_STATUS="\[\e[48;5;255m\]\[\e[38;5;208m\]\[\e[38;5;27m\] ✚ $NUM_MODIFIED \[\e[38;5;208m\]\[\e[38;5;2m\] ✔ $NUM_STAGED \[\e[38;5;208m\]\[\e[38;5;9m\] ✘ $NUM_CONFLICT "
         if [ "$RETCODE" -eq 0 ]; then
             GIT_STATUS+="\[\e[38;5;255m\]\[\e[48;5;236m\]"
         else
