@@ -27,7 +27,7 @@ include = [
 ]
 ```
 
-With the next command you can check which fix are needed to make your system compliant
+With the next command you can check which fixes are needed to make your system compliant
 (with 0, 1 or 2 verbose options):
 
 ```shell
