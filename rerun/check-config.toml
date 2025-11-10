@@ -1,0 +1,7 @@
+[[file_copied]]
+source = "config:rerun.sh"
+destination = "~/.local/bin/rerun"
+
+[[file_present]]
+file = "~/.local/bin/rerun"
+permissions = "775"

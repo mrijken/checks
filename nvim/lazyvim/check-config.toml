@@ -1,0 +1,113 @@
+[[lines_present]]
+file = "~/.config/nvim/init.lua"
+lines = """
+require("config.icons")
+require("config.lazy")
+require("config.keymaps")
+require("config.autocmds")
+require("config.options")
+"""
+
+[[file_present]]
+file = "~/.config/nvim/lua/config/autocmds.lua"
+
+# [[lines_present]]
+# file = "~/.config/nvim/lua/config/autocmds.lua"
+# marker = "-- Show Neotree at start up"
+# lines = """
+# vim.api.nvim_create_autocmd({ "VimEnter" }, {
+# 	pattern = "*",
+# 	command = ":Neotree show reveal",
+# })
+# """
+
+[[lines_absent]]
+file = "~/.config/nvim/lua/config/autocmds.lua"
+marker = "-- Show Neotree at start up"
+
+[[lines_present]]
+file = "~/.config/nvim/lua/config/autocmds.lua"
+marker = "-- Show oil at startup"
+lines = """
+vim.api.nvim_create_autocmd("VimEnter", {
+        callback = vim.schedule_wrap(function(data)
+                vim.print(vim.fn.isdirectory(data.file))
+                if data.file == "" or vim.fn.isdirectory(data.file) ~= 0 then
+                        vim.print(data.file)
+                        require("oil").open()
+                end
+        end),
+})
+"""
+
+
+[[file_copied]]
+source = "config:config/lazy.lua"
+destination = "~/.config/nvim/lua/config/lazy.lua"
+
+# TODO: replace with individual configs
+[[file_copied]]
+source = "config:config/options.lua"
+destination = "~/.config/nvim/lua/config/options.lua"
+
+[[file_present]]
+file = "~/.config/nvim/lua/config/keymaps.lua"
+
+[[lines_present]]
+file = "~/.config/nvim/lua/config/keymaps.lua"
+marker = "-- Open parent directory with oil"
+lines = """
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+"""
+
+[[file_present]]
+file = "~/.config/nvim/lazyvim.json"
+placeholder = """
+{
+  "extras": [
+  ]
+}"""
+indent = 2
+
+[[entry_present]]
+entry.extras = [
+    "lazyvim.plugins.extras.coding.mini-surround",
+    "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.editor.illuminate",
+    "lazyvim.plugins.extras.editor.neo-tree",
+    "lazyvim.plugins.extras.editor.refactoring",
+    "lazyvim.plugins.extras.editor.telescope",
+    "lazyvim.plugins.extras.test.core",
+    "lazyvim.plugins.extras.ui.dashboard-nvim",
+    "lazyvim.plugins.extras.ui.indent-blankline",
+    "lazyvim.plugins.extras.ui.treesitter-context",
+    "lazyvim.plugins.extras.ui.alpha",
+    "lazyvim.plugins.extras.editor.inc-rename",
+    "lazyvim.plugins.extras.editor.snacks_explorer",
+    "lazyvim.plugins.extras.editor.snacks_picker",
+    "lazyvim.plugins.extras.formatting.prettier",
+    "lazyvim.plugins.extras.test.core",
+]
+file = "~/.config/nvim/lazyvim.json"
+indent = 2
+
+
+# TODO: move to separate configs
+[[entry_present]]
+entry.extras = [
+    "lazyvim.plugins.extras.ai.codeium",
+    "lazyvim.plugins.extras.lang.angular",
+    "lazyvim.plugins.extras.lang.docker",
+    "lazyvim.plugins.extras.lang.helm",
+    "lazyvim.plugins.extras.lang.json",
+    "lazyvim.plugins.extras.lang.markdown",
+    "lazyvim.plugins.extras.lang.python",
+    "lazyvim.plugins.extras.lang.rust",
+    "lazyvim.plugins.extras.lang.sql",
+    "lazyvim.plugins.extras.lang.terraform",
+    "lazyvim.plugins.extras.lang.toml",
+    "lazyvim.plugins.extras.lang.yaml",
+    "lazyvim.plugins.extras.linting.eslint",
+]
+file = "~/.config/nvim/lazyvim.json"
+indent = 2

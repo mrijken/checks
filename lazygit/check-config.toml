@@ -1,0 +1,20 @@
+include = ["config:catppuccin/check-config.toml"]
+
+[[key_value_present]]
+file = "~/.config/lazygit/config.yml"
+key.promptToReturnFromSubprocess = false
+key.git.paging.colorArg = "always"
+key.git.paging.pager = """delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}""""
+key.gui.nerdFontsVersion = "3"
+
+[[package_present]]
+type = "rust"
+package = "git-delta"
+
+[[package_present]]
+version = "0.56.0"
+version_command = "hash -r 2>/dev/null; command -v lazygit >/dev/null && lazygit --version; true"
+type = "custom"
+package = "lazygit"
+install_command = "gah install jesseduffield/lazygit --unattended"
+uninstall_command = "rm ~/.local/bin/lazygit"

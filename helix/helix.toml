@@ -1,2 +1,0 @@
-[__config__]
-include = ["editor.toml", "git.toml"]

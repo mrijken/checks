@@ -1,28 +1,32 @@
-["~/.config/helix/config.toml".key_value_present.editor]
+[[key_value_present]]
+file = "~/.config/helix/config.toml"
+
+[[key_value_present.key.editor]]
 line-number = "relative"
 mouse = true
 true-color = true
 
-["~/.config/helix/config.toml".key_value_present.editor.file-picker]
+[[key_value_present.editor.file-picker]]
 hidden = false
 
-["~/.config/helix/config.toml".key_value_present.editor.soft-wrap]
+[[key_value_present.editor.soft-wrap]]
 enable = true
-max-wrap = 25 # increase value to reduce forced mid-word wrapping
+max-wrap = 25         # increase value to reduce forced mid-word wrapping
 max-indent-retain = 0
 
-["~/.config/helix/config.toml".key_value_present.editor.inline-diagnostics]
+[[key_value_present.editor.inline-diagnostics]]
 cursor-line = "hint"
 other-lines = "hint"
 
-["~/.config/helix/config.toml".key_value_present.editor.lsp]
+[[key_value_present.editor.lsp]]
 display-inlay-hints = true
 
-["~/.config/helix/config.toml".key_value_present.editor.cursor-shape]
+[[key_value_present.editor.cursor-shape]]
 insert = "bar"
 normal = "block"
 select = "underline"
 
-[["~/.bashrc".lines_present]]
-__marker__ = "# Helix"
-__lines__ = "export EDITOR=hx"
+[[lines_present]]
+file = "~/.bashrc"
+marker = "# Default editor"
+lines = "export EDITOR=hx"

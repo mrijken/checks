@@ -1,0 +1,39 @@
+[[lines_present]]
+file = "~/.bashrc"
+marker = "# bashrc directory"
+lines = """
+if [ -d "$HOME/.bashrc.d" ]; then
+    for script in "$HOME/.bashrc.d/"*; do
+        if [ -f "$script" ] && [ -r "$script" ]; then
+            source "$script"
+        fi
+    done
+fi
+"""
+
+[[dir_present]]
+dir = "~/.bashrc.d"
+
+[[file_copied]]
+source = "config:00-functions.sh"
+destination_dir = "~/.bashrc.d"
+
+[[file_copied]]
+source = "config:01-ps1-prompt.sh"
+destination_dir = "~/.bashrc.d"
+
+[[file_copied]]
+source = "config:10-aliasses.sh"
+destination_dir = "~/.bashrc.d"
+
+[[file_copied]]
+source = "config:10-path.sh"
+destination_dir = "~/.bashrc.d"
+
+[[file_copied]]
+source = "config:20-cd-pre-hook.sh"
+destination_dir = "~/.bashrc.d"
+
+[[file_copied]]
+source = "config:90-cd-pre-hook-dotenv.sh"
+destination_dir = "~/.bashrc.d"

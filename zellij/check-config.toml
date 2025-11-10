@@ -1,0 +1,31 @@
+[[file_copied]]
+source = "config:20-zellij.sh"
+destination_dir = "~/.bashrc.d"
+
+[[file_copied]]
+source = "config:themes/dracula.kdl"
+destination = "~/.config/zellij/themes/dracula.kdl"
+
+[[file_copied]]
+source = "config:themes/catppuccin.kdl"
+destination = "~/.config/zellij/themes/catppuccin.kdl"
+
+# as long as kdl is not supported, we copy the config file
+# [[lines_present]]
+# file = "~/.config/zellij/config.kdl"
+# marker = "// lock at startup"
+# lines = """default_mode "locked" """
+#
+# [[lines_present]]
+# file = "~/.config/zellij/config.kdl"
+# marker = "// theme"
+# lines = """theme "catppuccin-mocha" """
+
+[[file_copied]]
+destination = "~/.config/zellij/config.kdl"
+source = "config:config.kdl"
+
+[[package_present]]
+type = "rust"
+package = "zellij"
+version = "0.43.1"

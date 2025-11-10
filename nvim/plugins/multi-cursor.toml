@@ -1,0 +1,3 @@
+[[file_copied]]
+source = "config:multi-cursor.lua"
+destination_dir = "~/.config/nvim/lua/plugins"

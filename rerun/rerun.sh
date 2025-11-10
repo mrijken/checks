@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+# example: rerun pytest
+if [ $# -eq 0 ]; then
+    echo "Usage: rerun <command> [args...]"
+    return 1
+fi
+
+while true; do
+    # Run the command
+    "$@"
+
+    echo
+    echo "Press any key to rerun, or Ctrl+C to quit..."
+    # Wait for a single key press
+    read -n 1 -s
+    echo
+done

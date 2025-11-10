@@ -1,0 +1,3 @@
+[[file_copied]]
+source = "config:20-rust.sh"
+destination_dir = "~/.bashrc.d"

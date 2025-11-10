@@ -1,0 +1,14 @@
+[[key_value_present]]
+file = "~/.config/eget.toml"
+key.global.target = "~/.local/bin"
+
+[[package_present]]
+type = "custom"
+package = "eget"
+install_command = "cd ~/.local/bin && curl https://zyedidia.github.io/eget.sh | sh"
+uninstall_command = "rm ~/.local/bin/eget"
+# hash will make sure no cached results are used
+# command checks if the command exists
+# true will make sure that the exit code is 0, even when the command does not exist
+version_command = "hash -r 2>/dev/null; command -v eget >/dev/null && eget --version; true"
+version = "1.3.4"
