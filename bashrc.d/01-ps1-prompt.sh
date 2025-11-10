@@ -31,6 +31,8 @@ function ps1_powerline {
     retcode_bg="1"
     git_branch_fg="0"
     git_branch_bg="14"
+    git_status_fg="0"
+    git_status_bg="6"
 
     function w() {
         local text="$1"
@@ -101,17 +103,11 @@ function ps1_powerline {
 
         git_status)
             if [ "$GIT_BRANCH" ]; then
-                local NUM_MODIFIED=$(git diff --name-only --diff-filter=M | wc -l)
-                local NUM_STAGED=$(git diff --staged --name-only --diff-filter=AM | wc -l)
-                local NUM_CONFLICT=$(git diff --name-only --diff-filter=U | wc -l)
-                local GIT_STATUS="\[\e[48;5;255m\]\[\e[38;5;208m\]\[\e[38;5;27m\] ✚ $NUM_MODIFIED \[\e[38;5;208m\]\[\e[38;5;2m\] ✔ $NUM_STAGED \[\e[38;5;208m\]\[\e[38;5;9m\] ✘ $NUM_CONFLICT "
-                if [ "$RETCODE" -eq 0 ]; then
-                    GIT_STATUS+="\[\e[38;5;255m\]\[\e[48;5;236m\]"
-                else
-                    GIT_STATUS+="\[\e[38;5;255m\]\[\e[48;5;160m\]"
+                local IS_DIRTY=$(git status --untracked-files=no --porcelain)
+                if [ "$IS_DIRTY" ]; then
+                    git_status_prompt="Δ "
+                    PS1_PROMPT="$PS1_PROMPT$(w $git_status_prompt $git_status_fg $git_status_bg true)"
                 fi
-
-                # TODO: fix git status
             fi
             ;;
 
