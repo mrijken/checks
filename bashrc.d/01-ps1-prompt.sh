@@ -123,7 +123,7 @@ function ps1_powerline {
         SHOW_ARROW="true"
     done
 
-    PS1_PROMPT="$PS1_PROMPT\[$(tput setab $normal_bg)\]\[$(tput setaf $normal_fg)\]"
+    PS1_PROMPT="$PS1_PROMPT\[$(tput setab $normal_bg)\]\[$(tput setaf $normal_fg)\] "
     PS1="$PS1_PROMPT"
 }
 
