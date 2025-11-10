@@ -100,7 +100,6 @@ function ps1_powerline {
                 PS1_PROMPT="$PS1_PROMPT$git_prompt"
             fi
             ;;
-
         git_status)
             if [ "$GIT_BRANCH" ]; then
                 local IS_DIRTY=$(git status --untracked-files=no --porcelain)
