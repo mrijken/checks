@@ -1,0 +1,7 @@
+[[package_present]]
+version = "0.39.9"
+version_command = "hash -r 2>/dev/null; command -v sg >/dev/null && sg --version; true"
+type = "custom"
+package = "sg"
+install_command = "gah install ast-grep/ast-grep --unattended"
+uninstall_command = "rm ~/.local/bin/sg && rm ~/.local/bin/ast-grep"

@@ -1,0 +1,7 @@
+[[package_present]]
+version = "15.1.0"
+version_command = "hash -r 2>/dev/null; command -v luarocks >/dev/null && luarocks --version; true"
+type = "custom"
+package = "luarocks"
+install_command = "gah install luarocks/luarocks --unattended"
+uninstall_command = "rm ~/.local/bin/luarocks && rm ~/.local/bin/luarocks-admin"

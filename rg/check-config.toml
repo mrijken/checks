@@ -1,0 +1,7 @@
+[[package_present]]
+version = "15.1.0"
+version_command = "hash -r 2>/dev/null; command -v rg >/dev/null && rg --version; true"
+type = "custom"
+package = "ripgrep"
+install_command = "gah install BurntSushi/ripgrep --unattended"
+uninstall_command = "rm ~/.local/bin/rg"
