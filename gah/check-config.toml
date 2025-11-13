@@ -1,3 +1,11 @@
+[[file_copied]]
+source = "https://github.com/jqlang/jq/releases/download/jq-1.8.1/jq-linux64"
+destination = "~/.local/bin/jq"
+
+[[file_present]]
+file = "~/.local/bin/jq"
+permissions = "755"
+
 [[package_present]]
 install_command = """bash -c "$(curl -fsSL https://raw.githubusercontent.com/get-gah/gah/refs/heads/master/tools/install.sh)" """
 uninstall_command = "rm ~/.local/bin/gah"
