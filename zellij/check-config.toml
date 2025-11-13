@@ -26,6 +26,9 @@ destination = "~/.config/zellij/config.kdl"
 source = "config:config.kdl"
 
 [[package_present]]
-type = "rust"
-package = "zellij"
 version = "0.43.1"
+version_command = "hash -r 2>/dev/null; command -v zellij >/dev/null && zellij --version; true"
+type = "custom"
+package = "zellij"
+install_command = "gah install zellij-org/zellij --unattended"
+uninstall_command = "rm ~/.local/bin/zellij"

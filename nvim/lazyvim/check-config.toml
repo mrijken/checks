@@ -50,6 +50,11 @@ destination = "~/.config/nvim/lua/config/lazy.lua"
 source = "config:config/options.lua"
 destination = "~/.config/nvim/lua/config/options.lua"
 
+[[file_copied]]
+source = "config:config/icons.lua"
+destination = "~/.config/nvim/lua/config/icons.lua"
+
+
 [[file_present]]
 file = "~/.config/nvim/lua/config/keymaps.lua"
 

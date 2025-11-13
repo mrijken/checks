@@ -7,6 +7,7 @@ include = [
     "config:plugins/mini-icons.toml",
     # "config:plugins/multi-cursor.toml", # disabled because it will overwrite <C-q> for virtual block
     "config:plugins/sql.toml",
+    "config:plugins/oil.toml",
     "config:plugins/whichkey.toml",
     "config:plugins/python.toml",
     "config:plugins/git.toml",
@@ -16,6 +17,9 @@ include = [
 [[file_copied]]
 source = "https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.appimage"
 destination = "~/.local/bin/nvim"
+
+[[file_present]]
+file = "~/.local/bin/nvim"
 permissions = "755"
 
 [[package_present]]
