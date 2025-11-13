@@ -1,0 +1,19 @@
+[[key_value_present]]
+file = "~/.config/tombi/config.toml"
+
+[key_value_present.key.lint.rules]
+dotted-keys-out-of-order = "off"
+key-empty = "warn"
+tables-out-of-order = "off"
+
+[key_value_present.key.lsp]
+code-action.enabled = true
+completion.enabled = true
+diagnostics.enabled = true
+document-link.enabled = true
+formatting.enabled = false
+goto-declaration.enabled = true
+goto-definition.enabled = true
+goto-type-definition.enabled = true
+hover.enabled = true
+workspace-diagnostic.enabled = true
