@@ -33,3 +33,6 @@ function cd_pre_hook_venv() {
         unset VENV_DIR
     fi
 }
+
+# trigger hook for initial directory
+cd_pre_hook_venv .
