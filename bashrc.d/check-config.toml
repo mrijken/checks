@@ -15,6 +15,10 @@ fi
 dir = "~/.bashrc.d"
 
 [[file_copied]]
+source = "config:00-reset.sh"
+destination_dir = "~/.bashrc.d"
+
+[[file_copied]]
 source = "config:00-functions.sh"
 destination_dir = "~/.bashrc.d"
 
