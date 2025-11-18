@@ -61,7 +61,7 @@ vim.opt.ruler = true
 vim.opt.winborder = "rounded"
 
 -- TODO: move to python
-vim.g.lazyvim_python_lsp = "basedpyright"
+vim.g.lazyvim_python_lsp = "pyrefly"
 vim.lsp.config["basedpyright"] = {
 	settings = {
 		basedpyright = {
@@ -126,4 +126,3 @@ vim.keymap.set("i", "<C-s>", '<cmd>lua vim.lsp.buf.signature_help({border = "sin
 
 -- do not use swapfile
 vim.opt.swapfile = false
-
