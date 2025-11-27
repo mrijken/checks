@@ -23,5 +23,9 @@ file = "~/.local/bin/nvim"
 permissions = "755"
 
 [[package_present]]
-type = "rust"
-package = "fd-find"
+version = "10.3.0"
+version_command = "hash -r 2>/dev/null; command -v fd >/dev/null && fd --version; true"
+type = "custom"
+package = "fd"
+install_command = "gah install sharkdp/fd --unattended"
+uninstall_command = "rm ~/.local/bin/fd"
