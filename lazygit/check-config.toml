@@ -8,8 +8,12 @@ key.git.paging.pager = """delta --dark --paging=never --line-numbers --hyperlink
 key.gui.nerdFontsVersion = "3"
 
 [[package_present]]
-type = "rust"
-package = "git-delta"
+version = "0.56.0"
+version_command = "hash -r 2>/dev/null; command -v delta >/dev/null && delta --version; true"
+type = "custom"
+package = "delta"
+install_command = "gah install dandavison/delta --unattended"
+uninstall_command = "rm ~/.local/bin/delta"
 
 [[package_present]]
 version = "0.56.0"
