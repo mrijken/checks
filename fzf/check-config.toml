@@ -5,3 +5,7 @@ type = "custom"
 package = "fzf"
 install_command = "gah install junegunn/fzf --unattended"
 uninstall_command = "rm ~/.local/bin/fzf"
+
+[[file_copied]]
+source = "config:20-fzf.sh"
+destination_dir = "~/.bashrc.d"
