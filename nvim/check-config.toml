@@ -4,6 +4,7 @@ include = [
     "config:plugins/catppuccin.toml",
     "config:plugins/autotag.toml",
     "config:plugins/lsp.toml",
+    "config:plugins/edgy.toml",
     "config:plugins/mini-icons.toml",
     # "config:plugins/multi-cursor.toml", # disabled because it will overwrite <C-q> for virtual block
     "config:plugins/sql.toml",
