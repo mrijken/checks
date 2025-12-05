@@ -25,7 +25,7 @@ file = "~/.config/nvim/lua/config/autocmds.lua"
 file = "~/.config/nvim/lua/config/autocmds.lua"
 marker = "-- Show Neotree at start up"
 
-[[lines_present]]
+[[lines_absent]]
 file = "~/.config/nvim/lua/config/autocmds.lua"
 marker = "-- Show oil at startup"
 lines = """
@@ -40,6 +40,16 @@ vim.api.nvim_create_autocmd("VimEnter", {
 })
 """
 
+[[lines_present]]
+file = "~/.config/nvim/lua/config/autocmds.lua"
+marker = "-- Show edgy at startup"
+lines = """
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = vim.schedule_wrap(function(data)
+		require("edgy").open()
+	end),
+})
+"""
 
 [[file_copied]]
 source = "config:config/lazy.lua"
@@ -87,6 +97,7 @@ entry.extras = [
     "lazyvim.plugins.extras.ui.indent-blankline",
     "lazyvim.plugins.extras.ui.treesitter-context",
     "lazyvim.plugins.extras.ui.alpha",
+    "lazyvim.plugins.extras.ui.edgy",
     # "lazyvim.plugins.extras.editor.inc-rename",  # inc-rename conflicts with pyrefly
     "lazyvim.plugins.extras.editor.snacks_explorer",
     "lazyvim.plugins.extras.editor.snacks_picker",
