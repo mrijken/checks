@@ -35,4 +35,13 @@ alias egrep='egrep --color=auto'
 which notify-send &>/dev/null && alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # use fcd to fuzzy search for a git directory and cd to it
-alias fcd='cd $(fd --type dir --hidden '^\.git$' ~/repos | sed -e "s/\.git\///" | fzf)'
+function fcd() {
+    if [[ $1 ]]; then
+        query="--query=$1"
+    else
+        query=""
+    fi
+    
+    dirs="$(fd --type dir --hidden '^\.git$' ~/repos | sed -e "s/\.git\///" | fzf $query)"
+    cd "$dirs"
+}
