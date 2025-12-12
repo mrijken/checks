@@ -37,11 +37,12 @@ which notify-send &>/dev/null && alias alert='notify-send --urgency=low -i "$([ 
 # use fcd to fuzzy search for a git directory and cd to it
 function fcd() {
     if [[ $1 ]]; then
-        query="--query=$1"
+        query="--query=$1 -1"
     else
         query=""
     fi
-    
+
+    # shellcheck disable=SC2086
     dirs="$(fd --type dir --hidden '^\.git$' ~/repos | sed -e "s/\.git\///" | fzf $query)"
-    cd "$dirs"
+    cd "$dirs" || true
 }
