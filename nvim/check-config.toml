@@ -1,20 +1,3 @@
-include = [
-    "config:lazyvim/check-config.toml",
-    "config:plugins/autosave.toml",
-    "config:plugins/catppuccin.toml",
-    "config:plugins/autotag.toml",
-    "config:plugins/lsp.toml",
-    "config:plugins/edgy.toml",
-    "config:plugins/mini-icons.toml",
-    # "config:plugins/multi-cursor.toml", # disabled because it will overwrite <C-q> for virtual block
-    "config:plugins/sql.toml",
-    "config:plugins/oil.toml",
-    "config:plugins/whichkey.toml",
-    "config:plugins/python.toml",
-    "config:plugins/git.toml",
-    "config:plugins/fidget.toml",
-]
-
 [[file_copied]]
 source = "https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.appimage"
 destination = "~/.local/bin/nvim"
@@ -30,3 +13,7 @@ type = "custom"
 package = "fd"
 install_command = "gah install sharkdp/fd --unattended"
 uninstall_command = "rm ~/.local/bin/fd"
+
+[[dir_copied]]
+source = "~/check-config/checks/nvim/astro"
+destination = "~/.config/nvim"

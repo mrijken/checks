@@ -1,4 +1,4 @@
-[[lines_present]]
+# [[lines_present]]
 file = "~/.config/nvim/lua/config/options.lua"
 marker = "-- clipboard"
 lines = """
