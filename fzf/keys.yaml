@@ -1,0 +1,18 @@
+- program: bash
+  key: C-R
+  cmd: fzf-history-widget
+- program: bash
+  key: C-T
+  cmd: fzf-file-widget
+- program: bash
+  key: A-C
+  cmd: fzf-cd-widget
+- program: bash
+  key: <TAB>
+  cmd: |
+    autocomplete 
+    dir/file: `ls **<TAB>`
+    process: `kill -9 **<TAB>`
+    hostname: `ssh **<TAB>` 
+    env: `export **<TAB>` / unset **<TAB>`
+    alias: `unalias **<TAB>`

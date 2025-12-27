@@ -1,0 +1,3 @@
+[[file_copied]]
+source = "config:terminal.lua"
+destination = "~/.config/nvim/lua/plugins/terminal.lua"

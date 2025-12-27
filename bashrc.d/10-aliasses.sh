@@ -43,6 +43,11 @@ function fcd() {
     fi
 
     # shellcheck disable=SC2086
-    dirs="$(fd --type dir --hidden '^\.git$' ~/repos | sed -e "s/\.git\///" | fzf $query)"
-    cd "$dirs" || true
+    dirs="$(fd --type dir --hidden '^\.git$' ~/repos | sed -e "s/\.git\///" | fzf --prompt="󱊄 Select a dir: " --height=20% --min-height=10 --layout=reverse $query)"
+    if [[ $dirs ]]; then
+        cd "$dirs" || true
+    else
+        echo "󰂭  No dir selected!"
+    fi
+
 }

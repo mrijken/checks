@@ -1,0 +1,3 @@
+- program: bash
+  key: C-X C-E
+  cmd: use $EDITOR to edit current command

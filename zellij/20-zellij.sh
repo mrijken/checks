@@ -30,14 +30,11 @@ function z() {
             echo "SESSION_NAME is not set in .zellij/env"
         fi
     else
-        # no config file found, so dynamically create
-        # a session name and layout name
-        SESSION_NAME=${PWD##*/}
-        if [ -f "pyproject.toml" ]; then
-            LAYOUT_NAME="ide_python"
-        fi
-        if [ -f "Cargo.toml" ]; then
-            LAYOUT_NAME="ide_rust"
+        # no config file found, so list all sessions and let the user choose
+        SESSION_NAME=$(zellij ls | cut -c 8- | cut -d " " -f1 | sed -r 's/\x1B\[[0-9;]*[mK]//g' | fzf --prompt="󱊄 Select a session: " --height=20% --min-height=10 --layout=reverse --border)
+        if [ -z "$SESSION_NAME" ]; then
+            echo "󰂭  No session selected!"
+            return 1
         fi
     fi
 
