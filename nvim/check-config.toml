@@ -17,3 +17,4 @@ uninstall_command = "rm ~/.local/bin/fd"
 [[dir_copied]]
 source = "~/check-config/checks/nvim/astro"
 destination = "~/.config/nvim"
+always_copy_on_fix = true

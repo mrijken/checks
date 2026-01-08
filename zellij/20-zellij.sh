@@ -31,7 +31,7 @@ function z() {
         fi
     else
         # no config file found, so list all sessions and let the user choose
-        SESSION_NAME=$(zellij ls | cut -c 8- | cut -d " " -f1 | sed -r 's/\x1B\[[0-9;]*[mK]//g' | fzf --prompt="󱊄 Select a session: " --height=20% --min-height=10 --layout=reverse --border)
+        SESSION_NAME=$(zellij ls -n -s| fzf --prompt="󱊄 Select a session: (ctrl-d to delete)" --height=20% --min-height=10 --layout=reverse --border  --bind "ctrl-d:execute(zellij delete-session {1} --force)+reload(zellij ls -n -s)")
         if [ -z "$SESSION_NAME" ]; then
             echo "󰂭  No session selected!"
             return 1
