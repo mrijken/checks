@@ -8,7 +8,7 @@ key.git.paging.pager = """delta --dark --paging=never --line-numbers --hyperlink
 key.gui.nerdFontsVersion = "3"
 
 [[package_present]]
-version = "0.56.0"
+version = "0.58.0"
 version_command = "hash -r 2>/dev/null; command -v delta >/dev/null && delta --version; true"
 type = "custom"
 package = "delta"
@@ -16,7 +16,7 @@ install_command = "gah install dandavison/delta --unattended"
 uninstall_command = "rm ~/.local/bin/delta"
 
 [[package_present]]
-version = "0.56.0"
+version = "0.58.0"
 version_command = "hash -r 2>/dev/null; command -v lazygit >/dev/null && lazygit --version; true"
 type = "custom"
 package = "lazygit"
