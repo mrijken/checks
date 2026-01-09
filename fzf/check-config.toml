@@ -9,3 +9,7 @@ uninstall_command = "rm ~/.local/bin/fzf"
 [[file_copied]]
 source = "config:20-fzf.sh"
 destination_dir = "~/.bashrc.d"
+
+[[file_copied]]
+source = "config:20-fzf-rg.sh"
+destination_dir = "~/.bashrc.d"

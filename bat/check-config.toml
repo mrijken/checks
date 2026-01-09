@@ -1,0 +1,9 @@
+[[package_present]]
+version = "0.26.1"
+version_command = "hash -r 2>/dev/null; command -v fzf >/dev/null && fzf --version; true"
+type = "custom"
+package = "bat"
+install_command = "gah install sharkdp/bat --unattended"
+uninstall_command = "rm ~/.local/bin/bat"
+
+
