@@ -2,7 +2,7 @@
 rfv() (
   RELOAD='reload:rg --column --color=always --smart-case {q} || :'
   OPENER='if [[ $FZF_SELECT_COUNT -eq 0 ]]; then
-            bvim {1} +{2}     # No selection. Open the current line in NeoVim.
+            nvim {1} +{2}     # No selection. Open the current line in NeoVim.
           else
             nvim +cw -q {+f}  # Build quickfix list for the selected items.
           fi'
