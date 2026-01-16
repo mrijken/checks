@@ -1,0 +1,7 @@
+[[package_present]]
+version = "0.24.3"
+version_command = "hash -r 2>/dev/null; command -v lazydocker >/dev/null && lazydocker --version; true"
+type = "custom"
+package = "lazydocker"
+install_command = "gah install jesseduffield/lazydocker --unattended"
+uninstall_command = "rm ~/.local/bin/lazydocker"
