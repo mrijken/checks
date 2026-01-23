@@ -19,6 +19,8 @@ return {
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.prettier" },
+  { import = "astrocommunity.pack.javascript" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.search.grug-far-nvim" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
