@@ -1,5 +1,5 @@
 [[file_copied]]
-source = "https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.appimage"
+source = "https://github.com/neovim/neovim/releases/download/v0.11.6/nvim-linux-x86_64.appimage"
 destination = "~/.local/bin/nvim"
 
 [[file_present]]
