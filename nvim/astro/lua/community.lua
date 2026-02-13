@@ -21,6 +21,7 @@ return {
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.prettier" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.search.grug-far-nvim" },
