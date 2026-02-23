@@ -10,7 +10,7 @@ return {
 	opts = {
 		-- autoformat also when autosave is enabled
 		autocmds = {
-			-- autoformat_toggle = {},
+			autoformat_toggle = {},
 		},
 		-- Configure core features of AstroNvim
 		features = {
