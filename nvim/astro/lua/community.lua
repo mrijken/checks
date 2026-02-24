@@ -27,6 +27,7 @@ return {
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.search.grug-far-nvim" },
   { import = "astrocommunity.recipes.picker-lsp-mappings" },
   { import = "astrocommunity.recipes.astrolsp-no-insert-inlay-hints" },
