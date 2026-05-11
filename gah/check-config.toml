@@ -16,3 +16,11 @@ version_command = "hash -r 2>/dev/null; command -v gah >/dev/null && gah version
 version = "1.7.0"
 type = "custom"
 package = "gah"
+
+[[lines_present]]
+file = "~/.bashrc.d/01-variables.sh"
+marker = "# GAH"
+lines = """
+export GITHUB_PAT=${GITHUB_PAT}
+"""
+is_template = true
