@@ -16,7 +16,6 @@ return {
 	{ import = "astrocommunity.git.diffview-nvim" },
 	{ import = "astrocommunity.motion.mini-surround" },
 	{ import = "astrocommunity.motion.mini-surround" },
-	{ import = "astrocommunity.note-taking.obsidian-nvim" },
 	{ import = "astrocommunity.pack.bash" },
 	{ import = "astrocommunity.pack.docker" },
 	{ import = "astrocommunity.pack.json" },
