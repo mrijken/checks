@@ -1,3 +1,7 @@
 [[file_copied]]
 source = "config:20-rust.sh"
 destination_dir = "~/.bashrc.d"
+
+[[file_copied]]
+source = "config:cargo_config.toml"
+destination = "~/.cargo/config.toml"
