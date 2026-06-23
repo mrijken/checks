@@ -1,0 +1,15 @@
+[[package_present]]
+version = "0.8.31"
+version_command = "hash -r 2>/dev/null; command -v clin >/dev/null && clin --version; true"
+type = "custom"
+package = "clin"
+install_command = "gah install reekta92/clin-rs --unattended"
+uninstall_command = "rm ~/.local/bin/clin"
+
+[[package_present]]
+version = "2.1.2"
+version_command = "hash -r 2>/dev/null; command -v glow >/dev/null && glow --version; true"
+type = "custom"
+package = "glow"
+install_command = "gah install charmbracelet/glow --unattended"
+uninstall_command = "rm ~/.local/bin/glow"
