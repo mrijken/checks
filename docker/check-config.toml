@@ -1,5 +1,5 @@
 [[package_present]]
-version = "0.24.3"
+version = "0.25.2"
 version_command = "hash -r 2>/dev/null; command -v lazydocker >/dev/null && lazydocker --version; true"
 type = "custom"
 package = "lazydocker"
