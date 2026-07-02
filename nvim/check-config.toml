@@ -1,11 +1,3 @@
-[[file_copied]]
-source = "https://github.com/neovim/neovim/releases/download/v0.11.6/nvim-linux-x86_64.appimage"
-destination = "~/.local/bin/nvim"
-
-[[file_present]]
-file = "~/.local/bin/nvim"
-permissions = "755"
-
 [[package_present]]
 version = "10.3.0"
 version_command = "hash -r 2>/dev/null; command -v fd >/dev/null && fd --version; true"
