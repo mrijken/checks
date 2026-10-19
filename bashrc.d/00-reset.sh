@@ -15,6 +15,8 @@ shopt -s globstar
 # append to the history file, don't overwrite it
 shopt -s histappend
 
+shopt -s no_empty_cmd_completion
+
 # don't put duplicate lines or lines starting with space in the history.
 HISTCONTROL=ignoreboth
 
