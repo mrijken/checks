@@ -1,3 +1,11 @@
 [[file_copied]]
 source = "config:20-git-open-url.sh"
 destination = "~/.bashrc.d/20-git-open-url.sh"
+
+[[package_present]]
+version = "0.66.1"
+version_command = "hash -r 2>/dev/null; command -v gh >/dev/null && gh --version; true"
+type = "custom"
+package = "gh"
+install_command = "gah install cli/cli --unattended"
+uninstall_command = "rm ~/.local/bin/gh"
