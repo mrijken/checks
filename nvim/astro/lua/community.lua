@@ -13,8 +13,7 @@ return {
 	{ import = "astrocommunity.editing-support.undotree" },
 	{ import = "astrocommunity.editing-support.yanky-nvim" },
 	{ import = "astrocommunity.file-explorer.oil-nvim" },
-	{ import = "astrocommunity.git.diffview-nvim" },
-	{ import = "astrocommunity.motion.mini-surround" },
+	{ import = "astrocommunity.git.diffview-plus-nvim" },
 	{ import = "astrocommunity.motion.mini-surround" },
 	{ import = "astrocommunity.pack.bash" },
 	{ import = "astrocommunity.pack.docker" },
@@ -41,4 +40,5 @@ return {
 	{ import = "astrocommunity.test.neotest" },
 	{ import = "astrocommunity.test.nvim-coverage" },
 	{ import = "astrocommunity.utility.noice-nvim" },
+	{ import = "astrocommunity.completion.cmp-spell" },
 }
