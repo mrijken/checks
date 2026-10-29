@@ -10,6 +10,11 @@ keybinds clear-defaults=true {
         bind "Alt 7" { GoToTab 7; }
         bind "Alt 8" { GoToTab 8; }
         bind "Alt 9" { GoToTab 9; }
+        bind "Alt left" { GoToPreviousTab; }
+        bind "Alt down" { GoToNextTab; }
+        bind "Alt up" { GoToPreviousTab; }
+        bind "Alt right" { GoToNextTab; }
+        bind "Alt q" { Quit; }
     }
     pane {
         bind "left" { MoveFocus "left"; }
