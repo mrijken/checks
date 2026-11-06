@@ -6,6 +6,7 @@ key.promptToReturnFromSubprocess = false
 key.git.paging.colorArg = "always"
 key.git.paging.pager = """delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}""""
 key.gui.nerdFontsVersion = "3"
+key.worktree.defaultPath = ".worktrees"
 
 [[package_present]]
 version = "0.58.0"
