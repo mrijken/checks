@@ -12,6 +12,7 @@ return {
 	{ import = "astrocommunity.editing-support.nvim-treesitter-context" },
 	{ import = "astrocommunity.editing-support.undotree" },
 	{ import = "astrocommunity.editing-support.yanky-nvim" },
+	{ import = "astrocommunity.editing-support.bigfile-nvim" },
 	{ import = "astrocommunity.file-explorer.oil-nvim" },
 	{ import = "astrocommunity.git.diffview-plus-nvim" },
 	{ import = "astrocommunity.motion.mini-surround" },
